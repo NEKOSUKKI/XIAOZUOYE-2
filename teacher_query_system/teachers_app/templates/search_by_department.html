@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="{% url 'search_by_department' %}">
+        {% csrf_token %}
+        <h1>教师查询系统</h1>
+        <h2>按院系查询</h2>
+        <label for="department">Department:</label><br>
+        <input type="checkbox" name="department" value="传播学系"> 传播学系<br>
+        <input type="checkbox" name="department" value="数字媒体系"> 数字媒体系<br>
+        <input type="checkbox" name="department" value="设计系"> 设计系<br>
+        <input type="checkbox" name="department" value="艺术教研中心"> 艺术教研中心<br>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

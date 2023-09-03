@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="{% url 'search_by_name' %}">
+        {% csrf_token %}
+        <h1>教师查询系统</h1>
+        <h2>按姓名查询</h2>
+        <label for="name">姓名:</label>
+        <input type="text" name="name" id="name">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

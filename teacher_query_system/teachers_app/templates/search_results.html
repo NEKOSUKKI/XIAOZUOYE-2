@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for teacher in teachers %}
+        <h2>{{ teacher.name }}</h2>
+        <p>Department: {{ teacher.department }}</p>
+        <p>Title: {{ teacher.title }}</p>
+        <img src="{{ teacher.image_url }}" alt="{{ teacher.name }}" width="200">
+    {% empty %}
+        <p>No results found.</p>
+    {% endfor %}
+</body>
+</html>
